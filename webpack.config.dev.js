@@ -2,10 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
 const Dotenv=require('dotenv-webpack');
-const{ CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = { //se establece configuracion
     entry:'./src/index.js', //punto de entrada de nuestra aplicacion
@@ -15,6 +12,7 @@ module.exports = { //se establece configuracion
         filename: '[name].[contenthash].js',// si se coloca de esta manera podemos optimizar recursos
         assetModuleFilename: 'assets/images/[hash][ext][query]'
     },
+    mode: 'development',
     resolve: {
          extensions: ['.js'],
          alias: {
@@ -77,13 +75,5 @@ module.exports = { //se establece configuracion
             ]
         }),
         new Dotenv(),
-        new CleanWebpackPlugin(),
     ],
-    optimization:{
-        minimize:true,
-        minimizer:[
-            new CssMinimizerPlugin(),
-            new TerserPlugin(),
-        ]
-    }
 }
