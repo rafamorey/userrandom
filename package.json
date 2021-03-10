@@ -9,19 +9,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gndx/js-portfolio.git"
+    "url": "https://github.com/rafamorey/userrandom.git"
   },
   "keywords": [
     "javascript",
     "html",
     "css"
   ],
-  "author": "oscar barajas <oscar@gndx.dev>",
+  "author": "rafael morales <rafaelmreyes@hotmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gndx/js-portfolio/issues"
+    "url": "https://github.com/rafamorey/userrandom.git"
   },
-  "homepage": "https://github.com/gndx/js-portfolio#readme",
+  "homepage": "https://github.com/rafamorey/userrandom.git",
   "devDependencies": {
     "@babel/core": "^7.13.8",
     "@babel/plugin-transform-runtime": "^7.13.9",
